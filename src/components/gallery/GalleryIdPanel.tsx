@@ -1,5 +1,3 @@
-'use client'
-
 import GalleryIdAdminLoader from "./GalleryIdAdminLoader";
 import { useState, type FC } from "react";
 import GalleryIdPanelShare from "../shared/gallery/galleryAlbum/GalleryIdPanelShare";
@@ -36,29 +34,18 @@ const GalleryIdPanelLikeArtworkButton = dynamic(
 );
 
 type GalleryIdPanelProps = {
-  username: string;
-  projectId: number;
-  name: string;
-  profileImage: string;
-  title: string;
-  description: string;
-  softwares: Array<{
-    id: number;
-    software_name: string;
-    software_logo: string;
-  }>;
-  categories: Array<{
-    id: number;
-    category_name: string;
-    category_image: string;
-  }>;
-  tags: Array<{
-    id: number;
-    tag_name: string;
-  }>;
-  created_at: string;
-  updated_at: string;
-  slug: string;
+  username: GalleryData["username"];
+  projectId: GalleryData["id"];
+  name: UserData["name"];
+  profileImage: UserData["profileImage"];
+  title: GalleryData["project_title"];
+  description: GalleryData["project_description"];
+  softwares: GalleryData["softwares"];
+  categories: GalleryData["categories"];
+  tags: GalleryData["tags"];
+  created_at: GalleryData["created_at"];
+  updated_at: GalleryData["updated_at"];
+  slug: GalleryData["project_slug"];
   competition?: boolean;
 };
 
