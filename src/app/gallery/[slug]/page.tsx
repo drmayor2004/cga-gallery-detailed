@@ -1,5 +1,3 @@
-import { SessionProvider } from '@/providers/SessionProvider'
-import { LikeProvider } from '@/providers/LikeProvider'
 import GalleryDetailPage from '@/pages/GalleryDetailPage'
 
 interface PageProps {
@@ -10,13 +8,9 @@ interface PageProps {
 
 export default function GalleryPage({ params }: PageProps) {
   return (
-    <SessionProvider>
-      <LikeProvider>
-        <div className="min-h-screen bg-gray-50">
-          <GalleryDetailPage slug={params.slug} />
-        </div>
-      </LikeProvider>
-    </SessionProvider>
+    <div className="min-h-screen bg-gray-50">
+      <GalleryDetailPage slug={params.slug} />
+    </div>
   )
 }
 
