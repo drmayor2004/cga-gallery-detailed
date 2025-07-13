@@ -1,5 +1,5 @@
 import React from "react";
-import ChevronDown from "../../icons/ChevronDown";
+import ChevronDown from "../icons/ChevronDown";
 import type { FC } from "react";
 
 const GalleryIdShowMoreButton: FC<{ handleShowMore: () => void }> = ({ handleShowMore }) => {

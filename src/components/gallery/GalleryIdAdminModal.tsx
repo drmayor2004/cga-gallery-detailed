@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 
 import { type FC, Fragment } from "react";
-import MoreIcon from "../../icons/MoreIcon";
+import MoreIcon from "../icons/MoreIcon";
 
 import Button from "../Auth/SubmitButton";
 

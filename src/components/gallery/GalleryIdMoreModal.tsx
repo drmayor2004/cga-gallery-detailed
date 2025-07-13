@@ -2,7 +2,7 @@ import GalleryIdEditModalMainButtons from "./comment/GalleryIdEditModalMainButto
 import { Dialog, Transition } from "@headlessui/react";
 import { type FC, Fragment, useState } from "react";
 import Button from "../Auth/SubmitButton";
-import MoreIcon from "../../icons/MoreIcon";
+import MoreIcon from "../icons/MoreIcon";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import djangoAPI from "../../utils/constants/api/django";

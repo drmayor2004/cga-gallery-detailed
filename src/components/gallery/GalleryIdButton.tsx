@@ -1,5 +1,5 @@
 import React, { type FC } from "react";
-import Enlarge from "../../icons/Enlarge";
+import Enlarge from "../icons/Enlarge";
 
 const GalleryIdEnlargeButton: FC<{ openModal: () => void }> = ({
   openModal,

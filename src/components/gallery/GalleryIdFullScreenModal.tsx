@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { type FC, Fragment, useState } from "react";
-import X from "../../icons/X";
+import X from "../icons/X";
 import GalleryIdEnlargeButton from "./GalleryIdButton";
 
 const GalleryIdFullScreenModal: FC<{ image: string }> = ({ image }) => {
