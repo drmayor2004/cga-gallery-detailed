@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
-import GalleryIdArtworkBar from '../components/gallery/GalleryIdArtworkBar'
-import GalleryIdPanel from '../components/gallery/GalleryIdPanel'
-import GalleryIdComments from '../components/gallery/comment/GalleryIdComments'
-import GalleryIdFullScreenModal from '../components/gallery/GalleryIdFullScreenModal'
-import GalleryIdMoreModal from '../components/gallery/GalleryIdMoreModal'
-import GalleryIdShowMoreButton from '../components/gallery/GalleryIdShowMoreButton'
-import { mockGalleryData } from '../data/mockData'
+'use client'
 
-const GalleryDetailPage: React.FC = () => {
+import React, { useState } from 'react'
+import GalleryIdArtworkBar from '@/components/gallery/GalleryIdArtworkBar'
+import GalleryIdPanel from '@/components/gallery/GalleryIdPanel'
+import GalleryIdComments from '@/components/gallery/comment/GalleryIdComments'
+import GalleryIdFullScreenModal from '@/components/gallery/GalleryIdFullScreenModal'
+import GalleryIdMoreModal from '@/components/gallery/GalleryIdMoreModal'
+import GalleryIdShowMoreButton from '@/components/gallery/GalleryIdShowMoreButton'
+import { mockGalleryData } from '@/data/mockData'
+
+interface GalleryDetailPageProps {
+  slug?: string
+}
+
+const GalleryDetailPage: React.FC<GalleryDetailPageProps> = ({ slug }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isVideo, setIsVideo] = useState(false)
   const [showMore, setShowMore] = useState(false)
@@ -46,9 +52,9 @@ const GalleryDetailPage: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             <h1 className="text-2xl font-bold text-gray-900">CGAfrica Gallery</h1>
             <nav className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-gray-900">Home</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Gallery</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Profile</a>
+              <a href="/" className="text-gray-600 hover:text-gray-900">Home</a>
+              <a href="/gallery" className="text-gray-600 hover:text-gray-900">Gallery</a>
+              <a href="/profile" className="text-gray-600 hover:text-gray-900">Profile</a>
             </nav>
           </div>
         </div>
